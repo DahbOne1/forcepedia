@@ -1,13 +1,12 @@
 <header>
     <nav>
         <div>
-            <a routerLink="/home" routerLinkActive="active"><img src="Logo.png" alt=""> </a>
+            <a (click)="scrollTo('home')" routerLink="/" fragment="home"><img src="Logo.png" alt=""> </a>
         </div>
         <ul>
-            <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
-            <li><a routerLink="/about" routerLinkActive="active">Películas</a></li>
-            <li><a routerLink="/contact" routerLinkActive="active">Galería</a></li>
-            <li><a routerLink="/contact" routerLinkActive="active">Curiosidades</a></li>
+            <li><a (click)="scrollTo('home')" routerLink="/" fragment="home">Inicio</a></li>
+            <li><a (click)="scrollTo('movies')" routerLink="/" fragment="movies">Películas</a></li>
+            <li><a (click)="scrollTo('contact')" routerLink="/" fragment="contact">Contacto</a></li>
         </ul>
     </nav>
 </header>

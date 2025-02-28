@@ -1,21 +1,54 @@
 <section>
-    {{movie?.title}}
+    <h2>Detalles de la pelicula</h2>
+    <article>    
+        <div>
+            <p>Titulo: {{movie?.title}}</p>
+            <p>Episodio: {{movie?.episode_id}}</p>
+            <p>Director: {{movie?.director}}</p>
+            <p>Fecha de lanzamiento: {{movie?.release_date}}</p>
+        </div>    
+    </article>
+     <h4>Personajes</h4>
     <article>
-        <h4>Characters</h4>
+       
         <div *ngFor="let character of characters$ |async">
-            {{character.name}}
+            <p>Nombre: {{character.name}}</p>
+            <p>Cumpleaños: {{character.birth_year}}</p>
+            <p>Color de ojos: {{character.eye_color}} </p>
+            <p>Genero: {{character.gender}}</p>
+            <p>Color de cabello: {{character.hair_color}} </p>
+            <p>Masa: {{character.mass}} </p>               
         </div>
     </article>
+    <h4>Planetas</h4>
     <article>
-        <h4>Planets</h4>
+        
         <div *ngFor="let planet of planets$ |async">
-            {{planet.name}}
+            <p> {{planet.name}} </p>
+            <p> {{planet.climate}} </p>
+            <p> {{planet.diameter}} </p>
+            <p> {{planet.gravity}} </p>
+            <p> {{planet.orbital_period}} </p>
+            <p> {{planet.rotation_period}} </p>
+            <p> {{planet.surface_water}} </p>
+            <p> {{planet.terrain}} </p>
         </div>
     </article>
+    <h4>Naves</h4>
     <article>
-        <h4>Starships</h4>
+        
         <div *ngFor="let starship of starships$ |async">
-            {{starship.name}}
+            <p> {{starship.name}} </p>
+            <p> {{starship.model}} </p>
+            <p> {{starship.starship_class}} </p>
+            <p> {{starship.cargo_capacity}} </p>
+            <p> {{starship.consumables}} </p>
+            <p> {{starship.cost_in_credits}} </p>
+            <p> {{starship.crew}} </p>
+            <p> {{starship.hyperdrive_rating}} </p>
+            <p> {{starship.length}} </p>
+            <p> {{starship.manufacturer}} </p>
+            <p> {{starship.max_atmosphering_speed}} </p>
         </div>
     </article>
 </section>

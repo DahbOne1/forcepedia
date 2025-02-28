@@ -1,7 +1,7 @@
-<section>
+<section id="movies">
     <h2>Películas</h2>
-    <div *ngIf="movies.length > 0; else loading" >
-        <div *ngFor="let movie of movies; let i = index">
+    <div class="movie-container" *ngIf="movies.length > 0; else loading" >
+        <div  *ngFor="let movie of movies; let i = index">
             <app-movie [movie]="movie"></app-movie>
         </div>
     </div>

@@ -1,4 +1,5 @@
-<section>
+<section id="contact">
+    <h2>Formulario de contacto</h2>
     <article>
         <form (ngSubmit)="onSubmit()" [formGroup]="formContact">
             <div>
@@ -9,13 +10,13 @@
             </div>
             <div>
                 <label for="lastname">Apellido</label>
-                <input type="text" id="lastname" name="lastname" required formControlLastname="lastname">
+                <input type="text" id="lastname" name="lastname" required formControlName="lastname">
                 <p *ngIf="formContact.get('lastname')?.errors?.['required']">El apellido es requrido</p>
                 <p *ngIf="formContact.get('lastname')?.hasError('pattern')">Solo se permiten letras.</p>
             </div>
             <div>
                 <label for="birthdate">Fecha de nacimiento</label>
-                <input type="date" id="birthdate" name="birthdate" required formControlBirthdate="birthdate">
+                <input type="date" id="birthdate" name="birthdate" required formControlName="birthdate">
                 <p *ngIf="formContact.get('birthdate')?.errors?.['required']">El cumpleaños es requrido</p>
                 <p *ngIf="formContact.get('birthdate')?.hasError('isMenor')">Debes ser mayor de 18 años.</p>
             </div>     

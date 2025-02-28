@@ -37,7 +37,8 @@ export class FormComponent implements OnInit{
   }
 
   onSubmit(){
-    console.log("Formulario enviado: ", this.formContact.value);
+    console.log("Formulario enviado: ", this.formContact.value.name + " " + this.formContact.value.lastname + " " + this.formContact.value.birthdate);
+    alert(this.formContact.value.name + " " + this.formContact.value.lastname + " " + this.formContact.value.birthdate);
   }
 
 }
