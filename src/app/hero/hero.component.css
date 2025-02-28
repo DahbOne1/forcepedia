@@ -5,13 +5,13 @@ section{
     text-align: center;
 }
 
-div, article{
-    width: 50%;
+ article{
+    width: 100%;
     padding: 20px;
 }
 
 div{
-    background-image: url("/star-wars.webp");
+    background-image: url("/public/assets/star-wars.webp");
     background-size: cover;
     background-position: 100%;
     border-top-right-radius: 10px;
