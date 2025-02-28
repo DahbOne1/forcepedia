@@ -1,0 +1,25 @@
+<section>
+    <article>
+        <form (ngSubmit)="onSubmit()" [formGroup]="formContact">
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required formControlName="name">
+                <p *ngIf="formContact.get('name')?.errors?.['required']">El nombre es requrido.</p>
+                <p *ngIf="formContact.get('name')?.hasError('pattern')">Solo se permiten letras.</p>
+            </div>
+            <div>
+                <label for="lastname">Apellido</label>
+                <input type="text" id="lastname" name="lastname" required formControlLastname="lastname">
+                <p *ngIf="formContact.get('lastname')?.errors?.['required']">El apellido es requrido</p>
+                <p *ngIf="formContact.get('lastname')?.hasError('pattern')">Solo se permiten letras.</p>
+            </div>
+            <div>
+                <label for="birthdate">Fecha de nacimiento</label>
+                <input type="date" id="birthdate" name="birthdate" required formControlBirthdate="birthdate">
+                <p *ngIf="formContact.get('birthdate')?.errors?.['required']">El cumpleaños es requrido</p>
+                <p *ngIf="formContact.get('birthdate')?.hasError('isMenor')">Debes ser mayor de 18 años.</p>
+            </div>     
+            <button type="submit"  [disabled]="formContact.invalid">Guardar</button>
+        </form>
+    </article>
+</section>

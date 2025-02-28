@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import Tailwind CSS */
+
+
+body {
+    font-family: Oswald, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0A2A;
+    color: #efe95a;
+}
+
+ul{
+    list-style: none;
+}

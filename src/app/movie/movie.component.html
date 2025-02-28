@@ -1,0 +1,10 @@
+<div>
+    <img src="" alt="">
+    <div>
+        <span>{{movie.title}}</span>
+        <p>Director:  {{movie.director}}</p>
+        <p>Episodio #: {{movie.episode_id}}</p>
+        <p>Año de lanzamiento: {{movie.release_date}}</p>
+        <button [routerLink]="['/movies', movie.episode_id]">Ver detalles</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<section>
+    {{movie?.title}}
+    <article>
+        <h4>Characters</h4>
+        <div *ngFor="let character of characters$ |async">
+            {{character.name}}
+        </div>
+    </article>
+    <article>
+        <h4>Planets</h4>
+        <div *ngFor="let planet of planets$ |async">
+            {{planet.name}}
+        </div>
+    </article>
+    <article>
+        <h4>Starships</h4>
+        <div *ngFor="let starship of starships$ |async">
+            {{starship.name}}
+        </div>
+    </article>
+</section>
