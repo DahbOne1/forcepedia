@@ -11,7 +11,7 @@ div, article{
 }
 
 div{
-    background-image: url("/assets/star-wars.webp");
+    background-image: url("/star-wars.webp");
     background-size: cover;
     background-position: 100%;
     border-top-right-radius: 10px;
